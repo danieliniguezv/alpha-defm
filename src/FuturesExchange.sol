@@ -18,6 +18,8 @@ contract FuturesExchange {
     uint256 public totalBuyPrice;
     uint256 public totalSellPrice;
     uint256 public ask;
+    address public seller;
+    address constant public FUTURES_CONTRACT_ADDRESS = 0x5B1cB45B5C20a68660315F9AC13D326C93C66964;
     address constant public FUSDC_ADDRESS = 0x8A0C0417434a382604F0DD0aF3146dB6944331B7;
 
     constructor(address _issuerAddress) {
@@ -37,22 +39,22 @@ contract FuturesExchange {
         futuresContract.transferFuturesContracts(_to, amountOfContractsToBuy);
     }
 
-    function sellContract(
-        address _from, 
-        address payable _to, 
-        uint256 _amountOfContractsToSell, 
-        uint256 _ask, 
-        uint256 _totalSellPrice
-        ) payable public {
-            amountOfContractsToSell = _amountOfContractsToSell;
-            ask = _ask;
-            totalSellPrice = _ask * amountOfContractsToSell;
-            if(totalSellPrice == _totalSellPrice) {
-                fusdc.transferFrom(_from, _to, totalSellPrice);
-                futuresContract.transferFuturesContractsFrom(_from, _to, amountOfContractsToSell);
-            } else {
-                revert("Payment is not enough!");
-            }
+    function buyContractFrom(uint256 _amount, uint256 _priceToPay) payable public {
+        if(_priceToPay < totalSellPrice) revert("Payment is not enough!");
+        fusdc.transferFrom(msg.sender, seller, totalSellPrice);
+        sellContract(msg.sender, _amount);
+    }
+
+    function setContractSale(uint256 _ask, uint256 _amount) public returns(bool) {
+        seller = msg.sender;
+        ask = _ask;
+        amountOfContractsToSell = _amount;
+        totalSellPrice = ask * amountOfContractsToSell;
+        return true;
+    }
+
+    function sellContract(address _to, uint256 _amount) internal {
+        futuresContract.transferFuturesContractsFrom(seller, _to, _amount);
     }
 
     function withdraw(address payable _to) public {
