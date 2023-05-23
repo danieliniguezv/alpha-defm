@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.20;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+import "../lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
 contract FilecoinUSDC is IERC20 {
     string public constant name = "Filecoin USDC";
