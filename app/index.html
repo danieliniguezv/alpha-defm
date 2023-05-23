@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alpha DeFM</title>
+		<script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+		<script src=scripts/main.js></script>
+	</head>
+	<body>
+		<h1>Alpha</h1>
+		<h2>Decentralized Futures Market</h2>
+		<input type="button" value="Connect Wallet" onclick="connect();">
+		<h3>Wallet</h3>
+		<p id="account"></p>
+		<h3>Balance</h3>
+		<p><span id="balance"></span> FIL</p>
+		<h3>Futures Contract Specs</h3>
+		<table>
+			<tr>
+				<td>Product Code</td>
+				<td id="product-code"></td>
+			</tr>
+		</table>
+	</body>
+</html>
