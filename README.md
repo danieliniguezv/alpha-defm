@@ -115,25 +115,36 @@ implemented in such market. Remaining that the possibilities yet to explore are 
 At the moment the v0.1 is composed by 4 Actors written in solidity and deployed 
 in Filecoin's Hyperspace Testnet:
 
-#### Allows to create and deploy to the network the Futures Contract with the contract's specifications stored on-chain.
-##### 0x5B1cB45B5C20a68660315F9AC13D326C93C66964
+#### Allows to create and deploy to the network the Futures Contract with the contract's specifications stored on-chain:
 ```
 FuturesContract.sol
 ```
-#### Issues the Futures Contracts.
-##### 0xd70727B77D7f9263C586601D165741c05D9aDFa7
+```
+0x5B1cB45B5C20a68660315F9AC13D326C93C66964
+```
+
+#### Issues the Futures Contracts:
 ```
 FuturesContractIssuer.sol
 ```
-#### This is were the Futures Contracts are bought and sold.
-##### 0x34b05A2a930a44dA7f112F92D22e73E4c3495a03
+```
+0x6e823E1dF0Ae4f6eCad9734F88D96469A3A9BBDf
+```
+
+#### This is were the Futures Contracts are bought and sold:
 ```
 FuturesExchange.sol
 ```
-#### An ERC20 implementation of a wrapped Filecoin USDC.
-##### 0x8A0C0417434a382604F0DD0aF3146dB6944331B7
+```
+0x34b05A2a930a44dA7f112F92D22e73E4c3495a03
+```
+
+#### An ERC20 implementation of a wrapped Filecoin USDC:
 ```
 FilecoinUSDC.sol
+```
+```
+0x8A0C0417434a382604F0DD0aF3146dB6944331B7
 ```
 
 And a vanilla JavaScript App on the front-end.
