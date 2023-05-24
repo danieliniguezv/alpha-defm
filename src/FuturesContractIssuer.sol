@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: UNLICENSED
 
-pragma solidity 0.8.20;
+pragma solidity ^0.8.0;
 
 import "./FuturesContract.sol";
 
@@ -17,9 +17,14 @@ contract FuturesContractIssuer {
         futuresContractBalance[futuresContractAddress][futuresContract] = _amount;
     }
 
-    function transferFuturesContracts(address _owner, uint _amount) external {
+    function transferFuturesContracts(address _owner, uint256 _amount) external {
         futuresContractBalance[futuresContractAddress][futuresContract] -= _amount;
         futuresContractBalance[_owner][futuresContract] += _amount;
+    }
+
+    function transferFuturesContractsFrom(address _from, address _to, uint256 _amount) external {
+        futuresContractBalance[_from][futuresContract] -= _amount;
+        futuresContractBalance[_to][futuresContract] += _amount;
     }
 
     function getBalance(address _owner) public view returns(uint) {
