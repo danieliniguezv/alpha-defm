@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: UNLICENSED
 
-pragma solidity 0.8.20;
+pragma solidity ^0.8.0;
 
-import "contracts/FuturesContractIssuer.sol";
-import "contracts/FilecoinUSDC.sol";
+import "./FuturesContractIssuer.sol";
+import "./FilecoinUSDC.sol";
 
 
 contract FuturesExchange {
