@@ -607,6 +607,7 @@ async function connect() {
 
     let filecoinUSDCBalance;
     filecoinUSDCBalance = await filecoinUSDCContract.methods.balanceOf(walletAddress).call();
+    filecoinUSDCBalance = filecoinUSDCBalance/1000000;
     document.getElementById("filecoin-usdc-balance").innerHTML = filecoinUSDCBalance;
     console.log(filecoinUSDCBalance);
 
