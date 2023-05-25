@@ -18,7 +18,7 @@ contract FuturesExchange {
     uint256 public totalBuyPrice;
     uint256 public totalSellPrice;
     uint256 public ask;
-    address public seller;
+    address payable public seller;
     address constant public FUTURES_CONTRACT_ADDRESS = 0x5B1cB45B5C20a68660315F9AC13D326C93C66964;
     address constant public FUSDC_ADDRESS = 0x8A0C0417434a382604F0DD0aF3146dB6944331B7;
 
@@ -46,7 +46,7 @@ contract FuturesExchange {
     }
 
     function setContractSale(uint256 _ask, uint256 _amount) public returns(bool) {
-        seller = msg.sender;
+        seller = payable(msg.sender);
         ask = _ask;
         amountOfContractsToSell = _amount;
         totalSellPrice = ask * amountOfContractsToSell;
