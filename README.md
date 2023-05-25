@@ -111,7 +111,7 @@ market to discover the prices for Digital Data and Storage in a Decentralized Fa
 As we can see here, these are just a couple of the benefits and ideas that can be 
 implemented in such market. Remaining that the possibilities yet to explore are vast.
 
-## How we built it
+## How I built it
 At the moment the v0.1 is composed by 4 Actors written in solidity and deployed 
 in Filecoin's Hyperspace Testnet:
 
