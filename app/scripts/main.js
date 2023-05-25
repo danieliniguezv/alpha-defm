@@ -587,7 +587,7 @@ const filecoinUSDCContract = new web3.eth.Contract(filecoinUSDCAbi, filecoinUSDC
 const futuresContractContractAddress = "0x5B1cB45B5C20a68660315F9AC13D326C93C66964";
 const futuresContractContract = new web3.eth.Contract(futuresContractAbi, futuresContractContractAddress);
 
-const futuresContractIssuerContractAddress = "0x6e823E1dF0Ae4f6eCad9734F88D96469A3A9BBDf";
+const futuresContractIssuerContractAddress = "0xeC6FE1d6C22919bEB4A48A7A4a597Eb4515b499F";
 const futuresContractIssuerContract = new web3.eth.Contract(futuresContractIssuerAbi, futuresContractIssuerContractAddress);
 
 async function connect() {
