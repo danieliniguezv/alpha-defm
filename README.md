@@ -119,6 +119,11 @@ in Filecoin's Hyperspace Testnet:
 ```
 FuturesContract.sol
 ```
+##### Filecoin Address (Hyperspace)
+```
+t410flmoliw24ectimybrl6nmcpjsnsj4m2lemi42keq
+```
+##### ETH Address
 ```
 0x5B1cB45B5C20a68660315F9AC13D326C93C66964
 ```
@@ -127,22 +132,37 @@ FuturesContract.sol
 ```
 FuturesContractIssuer.sol
 ```
+##### Filecoin Address (Hyperspace)
 ```
-0x6e823E1dF0Ae4f6eCad9734F88D96469A3A9BBDf
+t410f5rx6dvwcfem35nferj5euwl6wrivwsm7jsogdsq
+```
+##### ETH Address
+```
+0xeC6FE1d6C22919bEB4A48A7A4a597Eb4515b499F
 ```
 
 #### This is were the Futures Contracts are bought and sold:
 ```
 FuturesExchange.sol
 ```
+##### Filecoin Address (Hyperspace)
 ```
-0x34b05A2a930a44dA7f112F92D22e73E4c3495a03
+t410fxpyrsumjlu6wbjw6xu5f3sm7xzl6lxzlgsrp4oi
+```
+##### ETH Address
+```
+0xBBF11951895D3d60A6DeBd3A5DC99FBE57E5DF2B
 ```
 
 #### An ERC20 implementation of a wrapped Filecoin USDC:
 ```
 FilecoinUSDC.sol
 ```
+##### Filecoin Address (Hyperspace)
+```
+t410frigaif2dji4cmbhq3ufpgfdnw2kegmnxq4y7k2a
+```
+##### ETH Address
 ```
 0x8A0C0417434a382604F0DD0aF3146dB6944331B7
 ```
